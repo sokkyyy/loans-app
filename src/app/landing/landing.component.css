@@ -1,0 +1,13 @@
+.applyButton {
+  position: fixed;
+  z-index: 10;
+  right:50px;
+}
+.learnMore {
+  position: absolute;
+  text-align: center;
+  z-index: 15;
+  color: white;
+  bottom: 50px;
+  width: 100%;
+}
