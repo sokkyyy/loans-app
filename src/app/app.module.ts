@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { LoanBenefitsComponent } from './loan-benefits/loan-benefits.component';
 import { FooterComponent } from './footer/footer.component';
+import { ApplicationFormComponent } from './application-form/application-form.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     CarouselComponent,
     HowItWorksComponent,
     LoanBenefitsComponent,
-    FooterComponent
+    FooterComponent,
+    ApplicationFormComponent
   ],
   imports: [
     BrowserModule,
