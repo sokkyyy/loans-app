@@ -1,9 +1,15 @@
 <div class="columns">
   <div class="column">
-    <app-form-steps [step]='step'></app-form-steps>
+    <div>
+      <app-form-steps [step]='step'></app-form-steps>
+    </div>
+
+    <div *ngIf="step === 1">
+      <app-personal-details-form></app-personal-details-form>
+    </div>
+
 
     <div>
-
       <button (click)='moveNext()'>Next</button>
       <button (click)='movePrev()'>Previous</button>
     </div>

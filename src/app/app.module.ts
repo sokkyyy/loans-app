@@ -13,6 +13,7 @@ import { LoanBenefitsComponent } from './loan-benefits/loan-benefits.component';
 import { FooterComponent } from './footer/footer.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { FormStepsComponent } from './form-steps/form-steps.component';
+import { PersonalDetailsFormComponent } from './personal-details-form/personal-details-form.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormStepsComponent } from './form-steps/form-steps.component';
     LoanBenefitsComponent,
     FooterComponent,
     ApplicationFormComponent,
-    FormStepsComponent
+    FormStepsComponent,
+    PersonalDetailsFormComponent
   ],
   imports: [
     BrowserModule,

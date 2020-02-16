@@ -7,8 +7,8 @@ import { faUser,faBuilding, faHandHoldingUsd} from '@fortawesome/free-solid-svg-
   styleUrls: ['./form-steps.component.sass']
 })
 export class FormStepsComponent implements OnInit {
-  
-  @Input() step:Number;
+
+  @Input() step;
   faUser = faUser;
   faBuilding = faBuilding;
   faHandHoldingUsd = faHandHoldingUsd;
