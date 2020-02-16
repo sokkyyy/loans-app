@@ -9,6 +9,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { LoanBenefitsComponent } from './loan-benefits/loan-benefits.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
     LandingComponent,
     NavbarComponent,
     CarouselComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    LoanBenefitsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
