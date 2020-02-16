@@ -27,6 +27,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ng-bootstrap/ng-bootstrap": "^5.2.3",
     "bulma": "^0.8.0",
+    "bulma-extensions": "^6.2.7",
+    "bulma-steps-component": "^0.5.3",
     "node-sass": "^4.13.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

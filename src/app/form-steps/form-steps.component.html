@@ -1,0 +1,32 @@
+<ul class="steps has-content-centered">
+      <li class="steps-segment" [ngClass]="(step === 1) ? 'is-active':'' ">
+        <span class="steps-marker">
+          <span class="icon">
+            <fa-icon [icon]="faUser"></fa-icon>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 1</p>
+        </div>
+      </li>
+      <li class="steps-segment" [ngClass]="(step === 2) ? 'is-active':'' ">
+        <span class="steps-marker">
+          <span class="icon">
+            <fa-icon [icon]="faBuilding"></fa-icon>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 2</p>
+        </div>
+      </li>
+      <li class="steps-segment " [ngClass]="(step === 3) ? 'is-active':'' ">
+        <span class="steps-marker">
+          <span class="icon">
+            <fa-icon [icon]="faHandHoldingUsd"></fa-icon>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="is-size-4">Step 3</p>
+        </div>
+      </li>
+</ul>

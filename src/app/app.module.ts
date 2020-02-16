@@ -12,6 +12,7 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { LoanBenefitsComponent } from './loan-benefits/loan-benefits.component';
 import { FooterComponent } from './footer/footer.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
+import { FormStepsComponent } from './form-steps/form-steps.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ApplicationFormComponent } from './application-form/application-form.co
     HowItWorksComponent,
     LoanBenefitsComponent,
     FooterComponent,
-    ApplicationFormComponent
+    ApplicationFormComponent,
+    FormStepsComponent
   ],
   imports: [
     BrowserModule,

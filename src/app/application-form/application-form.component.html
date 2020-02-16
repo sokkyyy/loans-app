@@ -1,1 +1,11 @@
-<p>application-form works!</p>
+<div class="columns">
+  <div class="column">
+    <app-form-steps [step]='step'></app-form-steps>
+
+    <div>
+
+      <button (click)='moveNext()'>Next</button>
+      <button (click)='movePrev()'>Previous</button>
+    </div>
+  </div>
+</div>

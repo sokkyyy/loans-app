@@ -1,7 +1,13 @@
+footer {
+  bottom: 0;
+  position: absolute;
+  width:100%;
+}
 .footerLogo {
   height: 50px;
   width: 150px;
 }
+
 .socials a {
   margin: 5px;
 }

@@ -6,8 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./application-form.component.css']
 })
 export class ApplicationFormComponent implements OnInit {
+  step: Number = 1;
 
-  constructor() { }
+  moveNext(){
+    this.step += 1;
+  }
+
+  movePrev(){
+    this.step -= 1;
+  }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
