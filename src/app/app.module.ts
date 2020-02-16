@@ -14,6 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { FormStepsComponent } from './form-steps/form-steps.component';
 import { PersonalDetailsFormComponent } from './personal-details-form/personal-details-form.component';
+import { BusinessInfoFormComponent } from './business-info-form/business-info-form.component';
+import { FundingFormComponent } from './funding-form/funding-form.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { PersonalDetailsFormComponent } from './personal-details-form/personal-d
     FooterComponent,
     ApplicationFormComponent,
     FormStepsComponent,
-    PersonalDetailsFormComponent
+    PersonalDetailsFormComponent,
+    BusinessInfoFormComponent,
+    FundingFormComponent
   ],
   imports: [
     BrowserModule,

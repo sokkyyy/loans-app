@@ -8,7 +8,14 @@
       <app-personal-details-form></app-personal-details-form>
     </div>
 
+    <div *ngIf="step === 2">
+      <app-business-info-form></app-business-info-form>
+    </div>
 
+    <div *ngIf="step === 3">
+      <app-funding-form></app-funding-form>
+    </div>
+    
     <div>
       <button (click)='moveNext()'>Next</button>
       <button (click)='movePrev()'>Previous</button>
