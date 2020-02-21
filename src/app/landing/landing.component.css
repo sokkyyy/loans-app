@@ -1,7 +1,12 @@
 .applyButton {
   position: fixed;
   z-index: 10;
-  right:50px;
+  right:10px;
+  bottom: 10px;
+}
+.applyBtn {
+  width: 150px;
+  text-decoration: none;
 }
 .learnMore {
   position: absolute;
@@ -10,4 +15,15 @@
   color: white;
   bottom: 50px;
   width: 100%;
+}
+.moveDown {
+  cursor: pointer;
+}
+.infograph {
+  width: 100%;
+  height: 100%;
+}
+.colInfo{
+  margin-top: 50px;
+
 }

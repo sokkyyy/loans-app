@@ -1,8 +1,20 @@
-<ul class="steps has-content-centered">
-      <li class="steps-segment" [ngClass]="(step === 1) ? 'is-active':'' ">
-        <span class="steps-marker">
+<ul class="steps has-content-centered is-success">
+      <li class="steps-segment" [ngClass]="(step === 0) ? 'is-active':'' ">
+        <span class="steps-marker" [ngClass]="(step > 0) ? 'is-success':'' ">
           <span class="icon">
-            <fa-icon [icon]="faUser"></fa-icon>
+            <fa-icon *ngIf="(step === 0)" [icon]="faFileSignature"></fa-icon>
+            <fa-icon *ngIf="(step > 0 )" [icon]="faCheckCircle"></fa-icon>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="is-size-6">Terms/Conditions</p>
+        </div>
+      </li>
+      <li class="steps-segment" [ngClass]="(step === 1) ? 'is-active':'' ">
+        <span class="steps-marker" [ngClass]="(step > 1) ? 'is-success':'' ">
+          <span class="icon">
+            <fa-icon *ngIf="(step <= 1)" [icon]="faUser"></fa-icon>
+            <fa-icon *ngIf="(step > 1 )" [icon]="faCheckCircle"></fa-icon>
           </span>
         </span>
         <div class="steps-content">
@@ -10,9 +22,10 @@
         </div>
       </li>
       <li class="steps-segment" [ngClass]="(step === 2) ? 'is-active':'' ">
-        <span class="steps-marker">
+        <span class="steps-marker" [ngClass]="(step > 2) ? 'is-success':'' ">
           <span class="icon">
-            <fa-icon [icon]="faBuilding"></fa-icon>
+            <fa-icon *ngIf="(step <= 2)" [icon]="faBuilding"></fa-icon>
+            <fa-icon *ngIf="(step > 2 )" [icon]="faCheckCircle"></fa-icon>
           </span>
         </span>
         <div class="steps-content">
@@ -20,9 +33,10 @@
         </div>
       </li>
       <li class="steps-segment " [ngClass]="(step === 3) ? 'is-active':'' ">
-        <span class="steps-marker">
+        <span class="steps-marker" [ngClass]="(step > 3) ? 'is-success':'' ">
           <span class="icon">
-            <fa-icon [icon]="faHandHoldingUsd"></fa-icon>
+            <fa-icon *ngIf="(step <= 3)" [icon]="faHandHoldingUsd"></fa-icon>
+            <fa-icon *ngIf="(step > 3 )" [icon]="faCheckCircle"></fa-icon>
           </span>
         </span>
         <div class="steps-content">

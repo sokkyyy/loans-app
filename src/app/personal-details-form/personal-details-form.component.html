@@ -1,23 +1,74 @@
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
-  </div>
-</div>
+<form #personalDetailsForm='ngForm' >
+<div class="columns">
+  <div class="field column">
+    <label class="has-text-weight-bold">
+      Full Name<span class="required-asterisk">*</span>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
-  </div>
-</div>
+    </label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-success is-small"
+        type="text" placeholder="Full Name" id='fullName' name="fullName"
+        ngModel #fullName="ngModel"
+        required minLength="4"
+      >
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
-  </div>
-</div>
+      <div [hidden]="fullName.valid || fullName.pristine" class="has-text-danger">
+        <p>Name is required</p>
+      </div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faUserEdit" ></fa-icon>
+      </span>
+    </div>
+  </div>
+
+  <div class="field column">
+    <label class="has-text-weight-bold">ID Number<span class="required-asterisk">*</span></label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-success is-small" type="text" placeholder="ID Number"
+        id='id' name='id' ngModel required #id="ngModel"
+      >
+      <div [hidden]="id.valid || id.pristine" class="has-text-danger">
+        <p>ID is required</p>
+      </div>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faIdCard" ></fa-icon>
+      </span>
+    </div>
   </div>
 </div>
+<div class="columns">
+  <div class="column field">
+    <label class="has-text-weight-bold">Phone Number<span class="required-asterisk">*</span></label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-success is-small" type="tel" placeholder="Phone Number" #phoneNumber="ngModel"
+        id='phoneNumber' name='phoneNumber' ngModel required
+      >
+      <div [hidden]="phoneNumber.valid || phoneNumber.pristine" class="has-text-danger">
+        <p>ID is required</p>
+      </div>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faMobile" ></fa-icon>
+      </span>
+    </div>
+  </div>
+
+  <div class="column field">
+    <label class="has-text-weight-bold">Email<span class="required-asterisk">*</span></label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-success is-small" type="email" placeholder="Email" #email="ngModel"
+        id='email' name='email' ngModel required
+      >
+      <div [hidden]="email.valid || email.pristine" class="has-text-danger">
+        <p>Email is required</p>
+      </div>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faEnvelope" ></fa-icon>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="navButtons">
+  <button type="submit" class="button is-success nextButton" [disabled]="!personalDetailsForm.valid" (click)='moveNext()'>Next</button>
+</div>
+</form>

@@ -1,31 +1,86 @@
+<form #fund="ngForm">
+<div class="columns">
+  <div class="field column">
+    <label>Personal or Business KRA Pin (For verification)<span class="required-asterisk">*</span></label>
+    <div class="control has-icons-left has-icons-right">
+      <input required ngModel name="kra" #kra="ngModel" class="input is-success is-small" type="text" placeholder="Full Name">
+      <div [hidden]="kra.valid || kra.pristine" class="has-text-danger">
+        <p>KRA Pin is required</p>
+      </div>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="" ></fa-icon>
+      </span>
+    </div>
+  </div>
 
-
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+  <div class="field column">
+    <label>How much do you need? (KSHS) <span class="required-asterisk">*</span></label>
+    <div class="control">
+      <div class="select is-success is-small">
+        <select>
+          <option>Less than KES 10,000</option>
+          <option>KES 10,000 - KES 50,000</option>
+          <option>KES 50,001 - KES 150,000</option>
+          <option>KES 150,001 - KES 500,000</option>
+          <option>KES 500,000 - KES 1,000,000</option>
+        </select>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+<div class="columns">
+  <div class="field column">
+    <label>What will you use the funds for? <span class="required-asterisk">*</span></label>
+    <div class="control">
+      <div class="select is-small is-success">
+        <select>
+          <option>Inventory/Stock Purchase</option>
+          <option>Equipment/Machinery</option>
+          <option>Cash Flow/Working Capital</option>
+          <option>Refinancing a Loan</option>
+          <option>Expansion</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+<div class="columns">
+  <div class="field column">
+    <label>In how many months will you pay back the loan? <span class="required-asterisk">*</span></label>
+    <div class="control">
+      <div class="select is-success is-small">
+        <select>
+          <option>2 Months</option>
+          <option>3 Months</option>
+          <option>6 Months</option>
+          <option>9 Months</option>
+          <option>12 Months</option>
+        </select>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+  <div class="field column">
+    <label>How did you hear about our SME program?</label>
+    <div class="control">
+      <div class="select is-success is-small">
+        <select>
+          <option>Google Search</option>
+          <option>Facebook</option>
+          <option>SME funded by us</option>
+          <option>Our Employee</option>
+          <option>News</option>
+        </select>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
-  </div>
 </div>
+<div class="navButtons">
+  <button class="button is-success" (click)='movePrev()'>Previous</button>
+  <button class="button is-success nextButton" (click)='moveNext()' [disabled]="!fund.valid">Next</button>
+</div>
+</form>

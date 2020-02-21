@@ -1,24 +1,49 @@
+<div class="columns formStep">
+  <div class="column"></div>
+  <div class="column is-three-quarters">
+    <app-form-steps [step]='step'></app-form-steps>
+  </div>
+  <div class="column"></div>
+</div>
 <div class="columns">
-  <div class="column">
-    <div>
-      <app-form-steps [step]='step'></app-form-steps>
+  <div class="column is-one-fifth"></div>
+  <div class="column appForm">
+    <div *ngIf="step === 0">
+      <div class="has-text-centered">
+        <p>Please read through our <a href="https://pezesha.com/policy/" class="has-text-success">Terms and Conditions</a></p>
+      </div>
+      <div class="has-text-centered agree">
+        <label class="checkbox">
+          <input type="checkbox" [checked]="agreeTerms" (click)='checkTerms()'>
+          I agree to the terms and conditions
+        </label>
+        <div>
+          <button class="button is-success" [disabled]='!agreeTerms' (click)="moveNext()">Start Application</button>
+        </div>
+      </div>
     </div>
-
     <div *ngIf="step === 1">
-      <app-personal-details-form></app-personal-details-form>
+      <app-personal-details-form (next)="moveNext()"></app-personal-details-form>
     </div>
 
     <div *ngIf="step === 2">
-      <app-business-info-form></app-business-info-form>
+      <app-business-info-form (next)="moveNext()" (prev)="movePrev()"></app-business-info-form>
     </div>
 
     <div *ngIf="step === 3">
-      <app-funding-form></app-funding-form>
+      <app-funding-form (next)="moveNext()" (prev)="movePrev()"></app-funding-form>
     </div>
-    
-    <div>
-      <button (click)='moveNext()'>Next</button>
-      <button (click)='movePrev()'>Previous</button>
+
+    <div *ngIf="step === 4">
+      <div>
+        <article class="message is-success">
+          <div class="message-body">
+            Your Application has been submitted successfully. Please wait for our response.
+          </div>
+        </article>
+        <div><a routerLink=''>Go back to Home Page</a></div>
+      </div>
     </div>
   </div>
+  <div class="column is-one-fifth"></div>
 </div>

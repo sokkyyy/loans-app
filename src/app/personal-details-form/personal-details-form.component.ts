@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
+import { faUserEdit, faIdCard,faMobile, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Personaldetails } from '../personaldetails';
+
 
 @Component({
   selector: 'app-personal-details-form',
@@ -6,6 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-details-form.component.css']
 })
 export class PersonalDetailsFormComponent implements OnInit {
+
+  faUserEdit = faUserEdit;
+  faIdCard = faIdCard;
+  faMobile = faMobile;
+  faEnvelope = faEnvelope;
+
+
+  @Output() next = new EventEmitter();
+
+  moveNext(){
+    this.next.emit();
+  }
 
   constructor() { }
 

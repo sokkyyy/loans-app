@@ -1,13 +1,13 @@
 <div class='applyButton'>
-    <a routerLink="apply" class="button is-success">Apply</a>
+    <a routerLink="apply" class="button is-success applyBtn">Apply</a>
 </div>
-<div class="columns">
+<div class="columns" style="height:100%">
   <div class="column">
     <app-carousel></app-carousel>
   </div>
-  <div class='learnMore'>
+  <div class='learnMore' >
     <p>Learn More</p>
-    <fa-icon [icon]="faAngleDown" (click)='scrollDown()'></fa-icon>
+    <fa-icon [icon]="faAngleDown" (click)='scrollDown()' appMoveDown size="2x" class="moveDown"></fa-icon>
 
   </div>
 </div>
@@ -25,5 +25,20 @@
     <app-loan-benefits></app-loan-benefits>
   </div>
 
+
+</div>
+
+
+<div class="columns colInfo">
+  <div class="column has-text-centered is-size-3 heading benHeading">
+    <p>How it Works</p>
+  </div>
+</div>
+<div class="columns">
+  <div class='column'></div>
+  <div class="column is-three-quarters ">
+    <img src="assets/images/infograph.png" class="infograph" />
+  </div>
+  <div class='column'></div>
 
 </div>

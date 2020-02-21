@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef,HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private elem:ElementRef) { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:scroll',['$event'])
+  onWindowScroll(e){
+    if(window.pageYOffset < 300) {
+      this.elem.nativeElement.style.display='none';
+    }
   }
 
 }

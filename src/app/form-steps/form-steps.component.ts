@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faUser,faBuilding, faHandHoldingUsd} from '@fortawesome/free-solid-svg-icons';
+import { faUser,faBuilding, faHandHoldingUsd,faFileSignature } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-form-steps',
@@ -12,6 +13,8 @@ export class FormStepsComponent implements OnInit {
   faUser = faUser;
   faBuilding = faBuilding;
   faHandHoldingUsd = faHandHoldingUsd;
+  faCheckCircle = faCheckCircle;
+  faFileSignature = faFileSignature;
 
   constructor() { }
 

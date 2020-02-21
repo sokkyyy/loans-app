@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./application-form.component.css']
 })
 export class ApplicationFormComponent implements OnInit {
-  step = 1;
+  step = 0;
+  agreeTerms = false;
 
+  checkTerms(){
+    this.agreeTerms = !this.agreeTerms;
+  }
   moveNext(){
     this.step = this.step + 1;
   }

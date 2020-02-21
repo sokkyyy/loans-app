@@ -16,7 +16,9 @@ import { FormStepsComponent } from './form-steps/form-steps.component';
 import { PersonalDetailsFormComponent } from './personal-details-form/personal-details-form.component';
 import { BusinessInfoFormComponent } from './business-info-form/business-info-form.component';
 import { FundingFormComponent } from './funding-form/funding-form.component';
-
+import { FormsModule } from '@angular/forms';
+import { NavbarScrollDirective } from './navbar-scroll.directive';
+import { MoveDownDirective } from './move-down.directive';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,16 @@ import { FundingFormComponent } from './funding-form/funding-form.component';
     FormStepsComponent,
     PersonalDetailsFormComponent,
     BusinessInfoFormComponent,
-    FundingFormComponent
+    FundingFormComponent,
+    NavbarScrollDirective,
+    MoveDownDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent,CarouselComponent]

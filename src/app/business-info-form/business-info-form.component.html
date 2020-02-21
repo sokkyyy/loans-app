@@ -1,53 +1,167 @@
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+<form #business='ngForm'>
+<div class="columns">
+  <div class="field column">
+    <label>Company Name<span class="required-asterisk">*</span></label>
+    <div class="control has-icons-left has-icons-right">
+      <input required ngModel name="companyName" #companyName="ngModel" class="input is-success is-small" type="text" placeholder="Full Name">
+      <div [hidden]="companyName.valid || companyName.pristine" class="has-text-danger">
+        <p>Company Name is required</p>
+      </div>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faBuilding" ></fa-icon>
+      </span>
+    </div>
   </div>
+
+  <div class="field column">
+    <label>Specific Location<span class="required-asterisk">*</span></label>
+    <div class="control has-icons-left has-icons-right">
+      <input required ngModel name="location" #location="ngModel" class="input is-success is-small" type="text" placeholder="Full Name">
+      <div [hidden]="location.valid || location.pristine" class="has-text-danger">
+        <p>Company Name is required</p>
+      </div>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faMapMarkerAlt" ></fa-icon>
+      </span>
+    </div>
+  </div>
+
 </div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+
+
+<div class="columns">
+  <div class="field column">
+    <label>Type of Business Registration?<span class="required-asterisk">*</span></label>
+    <div class="control">
+      <div class="select is-success is-small">
+        <select>
+          <option>Sole Proprietorship</option>
+          <option>Partnership</option>
+          <option>Limited Liability</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
   </div>
+
+  <div class="field column">
+    <label>How old is your business?<span class="required-asterisk">*</span></label>
+    <div class="control">
+      <div class="select is-success is-small">
+        <select>
+          <option>Less than 1 Month</option>
+          <option>1 - 3 Months</option>
+          <option>4 - 6 Months</option>
+          <option>7 - 12 Months</option>
+          <option>1 - 2 Years</option>
+          <option>2+ Years</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+<div class="columns">
+  <div class="field column">
+    <label>Industry of Business?<span class="required-asterisk">*</span></label>
+    <div class="control">
+      <div class="select is-success is-small">
+        <select>
+          <option>Manufacturing</option>
+          <option>Clothing</option>
+          <option>Technology</option>
+          <option>Internet</option>
+          <option>Engineering/Design</option>
+          <option>Unknown/Other</option>
+          <option>Computers/Electronics</option>
+          <option>Agriculture</option>
+          <option>Printing</option>
+          <option>Insurance</option>
+          <option>Education</option>
+          <option>Health</option>
+          <option>Services</option>
+          <option>Fast Moving Consumer Goods</option>
+          <option>Restaurant</option>
+          <option>Food</option>
+          <option>Transport</option>
+          <option>Property</option>
+          <option>Real Estate</option>
+          <option>Wholesale</option>
+          <option>Hospitality</option>
+        </select>
+      </div>
+    </div>
   </div>
+
+  <div class="field column">
+    <label>Estimated Yearly Revenue?(KES)<span class="required-asterisk">*</span></label>
+    <div class="control">
+        <div class="select is-success is-small">
+          <select>
+            <option>KES 0 - KES 50,000</option>
+            <option>KES 50,000 - KES 100,000</option>
+            <option>KES 100,000 - KES 200,000</option>
+            <option>KES 200,000 - KES 500,000</option>
+            <option>KES 500,000 - KES 1 Million</option>
+            <option>KES 1 Million - KES 2 Million</option>
+            <option>KES 2 Million - KES 5 Million</option>
+            <option>KES 5 Million+</option>
+
+          </select>
+        </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+<div class="columns">
+  <div class="field column">
+    <label>Company Registration No or Equivalent<span class="required-asterisk">*</span></label>
+    <div class="control has-icons-left has-icons-right">
+      <input required ngModel name="reg" #reg="ngModel" class="input is-success is-small" type="text" placeholder="Full Name">
+      <div [hidden]="reg.valid || reg.pristine" class="has-text-danger">
+        <p>Company Registration No is required</p>
+      </div>
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faBuilding" ></fa-icon>
+      </span>
+    </div>
   </div>
+
+  <div class="field column">
+    <label>Company Website/Social Media</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-success is-small" type="text" placeholder="Full Name">
+
+      <span class="icon is-small is-left">
+        <fa-icon [icon]="faShareAlt" ></fa-icon>
+      </span>
+    </div>
+  </div>
+
 </div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+<div class="columns">
+  <div class="field column">
+    <label>Mpesa\Till No Business Payments Accepted?<span class="required-asterisk">*</span></label>
+    <div class="control">
+      <div class="select is-success is-small">
+        <select>
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
+  <div class="column">
   </div>
-</div>
 
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
-  </div>
 </div>
-
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
-  </div>
+<div class="navButtons">
+  <button class="button is-success" (click)='movePrev()'>Previous</button>
+  <button class="button is-success nextButton" (click)='moveNext()' [disabled]="!business.valid">Next</button>
 </div>
-
-<div class="field">
-  <div class="control">
-    <input class="input is-success" type="text" placeholder="Success input">
-  </div>
-</div>
+</form>
